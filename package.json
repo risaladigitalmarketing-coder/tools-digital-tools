@@ -1,0 +1,30 @@
+{
+  "name": "seller-tools",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "packages/tools/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=apps/web",
+    "build": "npm run build --workspaces",
+    "build:web": "npm run build --workspace=apps/web",
+    "lint": "npm run lint --workspaces",
+    "typecheck": "npm run typecheck --workspaces",
+    "ui:build": "npm run build --workspace=packages/ui",
+    "tool:pdf": "npm run dev --workspace=packages/tools/pdf-toolkit",
+    "tool:whatsapp": "npm run dev --workspace=packages/tools/whatsapp-link-generator",
+    "tool:business": "npm run dev --workspace=packages/tools/business-name-generator",
+    "tool:marketing": "npm run dev --workspace=packages/tools/marketing-calculators",
+    "tool:aiads": "npm run dev --workspace=packages/tools/ai-meta-ads-generator"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
